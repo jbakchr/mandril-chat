@@ -2,7 +2,7 @@ export const Navbar = () => {
   return (
     <div
       style={{
-        backgroundColor: "blue",
+        backgroundColor: "#0098c5",
         position: "fixed",
         top: 0,
         left: 0,

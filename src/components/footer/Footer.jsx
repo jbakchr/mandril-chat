@@ -1,3 +1,3 @@
 export const Footer = () => {
-  return <div>Footer</div>;
+  return <div style={{ backgroundColor: "#0098c5" }}>Footer</div>;
 };
