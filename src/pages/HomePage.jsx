@@ -1,3 +1,4 @@
+import { Footer } from "../components/footer/Footer";
 import { Navbar } from "../components/navbar/Navbar";
 
 export const HomePage = () => {
@@ -18,7 +19,7 @@ export const HomePage = () => {
           Chat message
         </p>
       </div>
-      <p>Footer</p>
+      <Footer />
     </div>
   );
 };
