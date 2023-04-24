@@ -8,9 +8,14 @@ export const Navbar = () => {
         left: 0,
         right: 0,
         height: "50px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
       }}
     >
+      <p>logo</p>
       <h1>Navbar</h1>
+      <p>user</p>
     </div>
   );
 };
