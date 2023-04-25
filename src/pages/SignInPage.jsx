@@ -8,6 +8,7 @@ import { AvatarImage } from "../components/avatar/AvatarImage";
 import { AvatarSection } from "../components/avatar/AvatarSection";
 import { AvatarSubHeader } from "../components/avatar/AvatarSubHeader";
 import { AvatarNameInput } from "../components/avatar/AvatarNameInput";
+import { AvatarImageList } from "../components/avatar/AvatarImageList";
 
 const mainContentStyle = {
   display: "flex",
@@ -30,6 +31,7 @@ export const SignInPage = () => {
         </AvatarSection>
         <AvatarSection>
           <AvatarSubHeader headerText="Step #2 : Vælg din avatar" />
+          <AvatarImageList />
         </AvatarSection>
       </MainContent>
       <Footer />
