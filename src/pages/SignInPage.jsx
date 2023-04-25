@@ -26,6 +26,9 @@ export const SignInPage = () => {
         <AvatarSection>
           <AvatarSubHeader headerText="Step #1 : Indtast avatar navn" />
         </AvatarSection>
+        <AvatarSection>
+          <AvatarSubHeader headerText="Step #2 : Vælg din avatar" />
+        </AvatarSection>
       </MainContent>
       <Footer />
     </MainLayout>
