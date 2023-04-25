@@ -1,4 +1,5 @@
 import React from "react";
+import { AvatarImagePlaceholder } from "./AvatarImagePlaceholder";
 
 export const AvatarImage = () => {
   return (
@@ -11,9 +12,11 @@ export const AvatarImage = () => {
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "50%",
+        flexDirection: "column",
+        backgroundColor: "lightgray",
       }}
     >
-      AvatarImage
+      <AvatarImagePlaceholder />
     </div>
   );
 };
