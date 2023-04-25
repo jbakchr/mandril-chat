@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AvatarButton = () => {
+export const AvatarButton = ({ submitAvatar }) => {
   return (
     <button
       style={{
@@ -13,6 +13,7 @@ export const AvatarButton = () => {
         letterSpacing: "2px",
         color: "#01a75b",
       }}
+      onClick={submitAvatar}
     >
       Sæt avatar
     </button>

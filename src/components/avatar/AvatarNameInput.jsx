@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AvatarNameInput = () => {
+export const AvatarNameInput = ({ inputRef }) => {
   return (
     <input
       type="text"
@@ -10,6 +10,7 @@ export const AvatarNameInput = () => {
         outline: "none",
       }}
       placeholder="Skriv avatar navn her.."
+      ref={inputRef}
     />
   );
 };
