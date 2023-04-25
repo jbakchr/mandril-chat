@@ -1,9 +1,20 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+
+import { saveChatMessage } from "../../firebase/db";
 
 export const ChatInputForm = ({ user }) => {
   const inputRef = useRef();
 
-  console.log(user);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
+
+  const submitChatMessage = () => {
+    const msg = inputRef.current.value;
+    saveChatMessage(msg, user);
+    inputRef.current.value = "";
+    inputRef.current.focus();
+  };
 
   return (
     <div
@@ -33,7 +44,7 @@ export const ChatInputForm = ({ user }) => {
           padding: "0px 10px",
           boxShadow: "1px 1px black",
         }}
-        onClick={() => console.log(inputRef.current.value)}
+        onClick={submitChatMessage}
       >
         Send
       </button>
