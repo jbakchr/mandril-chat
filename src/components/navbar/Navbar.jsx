@@ -18,7 +18,7 @@ export const Navbar = () => {
     <div style={navbarStyle}>
       <NavbarLogo hidden />
       <NavbarHeader />
-      <NavbarLogo />
+      <NavbarLogo hidden />
     </div>
   );
 };

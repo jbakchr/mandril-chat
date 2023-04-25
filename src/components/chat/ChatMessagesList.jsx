@@ -27,6 +27,12 @@ export const ChatMessagesList = ({ user }) => {
     };
   }, []);
 
+  useEffect(() => {
+    const height = document.getElementById("main-content").clientHeight;
+    console.log(height);
+    window.scrollTo(0, height);
+  }, [chatMessages]);
+
   return (
     <div>
       {chatMessages.map((chat) => {
