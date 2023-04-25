@@ -4,6 +4,7 @@ import { Footer } from "../components/footer/Footer";
 import { AvatarHeader } from "../components/avatar/AvatarHeader";
 import { MainContent } from "../layout/MainContent";
 import { Divider } from "../components/avatar/Divider";
+import { AvatarImage } from "../components/avatar/AvatarImage";
 
 const mainContentStyle = {
   display: "flex",
@@ -19,6 +20,7 @@ export const SignInPage = () => {
       <MainContent styles={mainContentStyle}>
         <AvatarHeader />
         <Divider />
+        <AvatarImage />
       </MainContent>
       <Footer />
     </MainLayout>
