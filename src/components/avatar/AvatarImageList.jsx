@@ -6,7 +6,7 @@ const images = [
   { url: "laughing_eagle.png", altText: "Laughing Eagle" },
 ];
 
-export const AvatarImageList = () => {
+export const AvatarImageList = ({ setAvatarImg }) => {
   return (
     <div>
       {images.map((img, index) => {
@@ -16,6 +16,7 @@ export const AvatarImageList = () => {
             src={`/images/${img.url}`}
             alt={img.altText}
             style={{ width: "50px", borderRadius: "50%", margin: "3px" }}
+            onClick={() => setAvatarImg(img)}
           />
         );
       })}

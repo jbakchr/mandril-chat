@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 import { MainLayout } from "../layout/MainLayout";
 import { Navbar } from "../components/navbar/Navbar";
@@ -22,9 +22,11 @@ const mainContentStyle = {
 
 export const SignInPage = () => {
   const inputRef = useRef();
+  const [avatarImg, setAvatarImg] = useState(null);
 
   const submitAvatar = () => {
     console.log(inputRef.current.value);
+    console.log(avatarImg);
   };
 
   return (
@@ -40,7 +42,7 @@ export const SignInPage = () => {
         </AvatarSection>
         <AvatarSection>
           <AvatarSubHeader headerText="Step #2 : Vælg din avatar" />
-          <AvatarImageList />
+          <AvatarImageList setAvatarImg={setAvatarImg} />
         </AvatarSection>
       </MainContent>
       <Footer>
