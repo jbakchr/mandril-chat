@@ -1,9 +1,6 @@
 import React from "react";
 
 export const ChatMessage = ({ chat, user }) => {
-  console.log("chat:", chat);
-  console.log("user:", user);
-
   let flexDirection = "row";
 
   if (user) {
