@@ -2,8 +2,7 @@ export const AvatarSection = ({ children }) => {
   return (
     <div
       style={{
-        margin: "10px 0px",
-        border: "1px solid black",
+        marginTop: "20px",
         width: "300px",
         display: "flex",
         flexDirection: "column",
