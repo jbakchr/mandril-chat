@@ -6,6 +6,7 @@ import { MainContent } from "../layout/MainContent";
 import { Divider } from "../components/avatar/Divider";
 import { AvatarImage } from "../components/avatar/AvatarImage";
 import { AvatarSection } from "../components/avatar/AvatarSection";
+import { AvatarSubHeader } from "../components/avatar/AvatarSubHeader";
 
 const mainContentStyle = {
   display: "flex",
@@ -22,7 +23,9 @@ export const SignInPage = () => {
         <AvatarHeader />
         <Divider />
         <AvatarImage />
-        <AvatarSection />
+        <AvatarSection>
+          <AvatarSubHeader headerText="Step #1 : Indtast avatar navn" />
+        </AvatarSection>
       </MainContent>
       <Footer />
     </MainLayout>
