@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "site": "mandril-chatten",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
