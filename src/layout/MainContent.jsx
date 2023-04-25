@@ -6,7 +6,7 @@ export const MainContent = ({ children, styles }) => {
       style={{
         flexGrow: 1,
         marginTop: "50px",
-        paddingBottom: "50px",
+        paddingBottom: "55px",
         ...styles,
       }}
     >
