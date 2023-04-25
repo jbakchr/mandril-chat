@@ -20,6 +20,10 @@ export const ChatMessagesList = () => {
 
       setChatMessages(messages);
     });
+
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   console.log(chatMessages);
