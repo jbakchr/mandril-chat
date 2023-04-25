@@ -2,10 +2,15 @@ import React from "react";
 
 export const AvatarHeader = () => {
   return (
-    <h1
-      style={{ fontFamily: "Lobster Two", color: "grey", letterSpacing: "2px" }}
+    <h2
+      style={{
+        fontFamily: "Lobster Two",
+        color: "grey",
+        letterSpacing: "4px",
+        fontSize: "30px",
+      }}
     >
       Vælg din avatar
-    </h1>
+    </h2>
   );
 };
