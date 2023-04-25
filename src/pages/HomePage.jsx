@@ -16,7 +16,7 @@ export const HomePage = () => {
     <MainLayout>
       <Navbar />
       <MainContent>
-        <ChatMessagesList />
+        <ChatMessagesList user={user} />
       </MainContent>
       <Footer>
         {!user ? <SignInButton /> : <ChatInputForm user={user} />}

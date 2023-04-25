@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
 
 import { db } from "../../firebase/db";
+import { ChatMessage } from "./ChatMessage";
 
-export const ChatMessagesList = () => {
+export const ChatMessagesList = ({ user }) => {
   const [chatMessages, setChatMessages] = useState([]);
 
   useEffect(() => {
@@ -26,13 +27,11 @@ export const ChatMessagesList = () => {
     };
   }, []);
 
-  console.log(chatMessages);
-
   return (
-    <ul>
+    <div>
       {chatMessages.map((chat) => {
-        return <li key={chat.id}>{chat.msg}</li>;
+        return <ChatMessage key={chat.id} chat={chat} user={user} />;
       })}
-    </ul>
+    </div>
   );
 };
