@@ -1,7 +1,9 @@
 import { useRef } from "react";
 
-export const ChatInputForm = () => {
+export const ChatInputForm = ({ user }) => {
   const inputRef = useRef();
+
+  console.log(user);
 
   return (
     <div

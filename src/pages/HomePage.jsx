@@ -11,7 +11,6 @@ import { ChatInputForm } from "../components/chat/ChatInputForm";
 
 export const HomePage = () => {
   const { user } = useContext(GlobalContext);
-  console.log("user:", user);
 
   return (
     <MainLayout>
@@ -19,7 +18,9 @@ export const HomePage = () => {
       <MainContent>
         <ChatMessagesList />
       </MainContent>
-      <Footer>{!user ? <SignInButton /> : <ChatInputForm />}</Footer>
+      <Footer>
+        {!user ? <SignInButton /> : <ChatInputForm user={user} />}
+      </Footer>
     </MainLayout>
   );
 };
