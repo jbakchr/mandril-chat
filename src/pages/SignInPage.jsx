@@ -1,5 +1,7 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
+import { GlobalContext } from "../context/GlobalContext";
 import { MainLayout } from "../layout/MainLayout";
 import { Navbar } from "../components/navbar/Navbar";
 import { MainContent } from "../layout/MainContent";
@@ -21,12 +23,18 @@ const mainContentStyle = {
 };
 
 export const SignInPage = () => {
+  const { submitUser } = useContext(GlobalContext);
   const inputRef = useRef();
   const [avatarImg, setAvatarImg] = useState(null);
 
   const submitAvatar = () => {
-    console.log(inputRef.current.value);
-    console.log(avatarImg);
+    const userData = {
+      name: inputRef.current.value,
+      avatarImg,
+      id: uuidv4(),
+    };
+
+    submitUser(userData);
   };
 
   return (

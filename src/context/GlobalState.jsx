@@ -2,12 +2,17 @@ import { useState } from "react";
 import { GlobalContext } from "./GlobalContext";
 
 export const GlobalState = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
 
   console.log("user is:", user);
 
+  const submitUser = (userData) => {
+    localStorage.setItem("user", JSON.stringify(userData));
+    setUser(userData);
+  };
+
   return (
-    <GlobalContext.Provider value={{ user, setUser }}>
+    <GlobalContext.Provider value={{ user, submitUser }}>
       {children}
     </GlobalContext.Provider>
   );
