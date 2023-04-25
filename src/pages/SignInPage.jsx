@@ -23,7 +23,7 @@ const mainContentStyle = {
 };
 
 export const SignInPage = () => {
-  const { user, submitUser } = useContext(GlobalContext);
+  const { submitUser } = useContext(GlobalContext);
   const inputRef = useRef();
   const [avatarImg, setAvatarImg] = useState(null);
 
@@ -43,7 +43,7 @@ export const SignInPage = () => {
       <MainContent styles={mainContentStyle}>
         <AvatarHeader />
         <Divider />
-        <AvatarImage avatarImg={avatarImg} user={user} />
+        <AvatarImage avatarImg={avatarImg} />
         <AvatarSection>
           <AvatarSubHeader headerText="Step #1 : Indtast avatar navn" />
           <AvatarNameInput inputRef={inputRef} />
