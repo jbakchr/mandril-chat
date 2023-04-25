@@ -1,4 +1,4 @@
-export const Footer = () => {
+export const Footer = ({ children }) => {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ export const Footer = () => {
         height: "50px",
       }}
     >
-      Footer
+      {children}
     </div>
   );
 };
