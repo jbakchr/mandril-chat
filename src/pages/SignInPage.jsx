@@ -1,4 +1,5 @@
 import { useContext, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 import { GlobalContext } from "../context/GlobalContext";
@@ -26,6 +27,7 @@ export const SignInPage = () => {
   const { submitUser } = useContext(GlobalContext);
   const inputRef = useRef();
   const [avatarImg, setAvatarImg] = useState(null);
+  const navigate = useNavigate();
 
   const submitAvatar = () => {
     const userData = {
@@ -35,6 +37,7 @@ export const SignInPage = () => {
     };
 
     submitUser(userData);
+    navigate("/");
   };
 
   return (
