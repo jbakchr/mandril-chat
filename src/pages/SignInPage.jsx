@@ -9,6 +9,7 @@ import { AvatarSection } from "../components/avatar/AvatarSection";
 import { AvatarSubHeader } from "../components/avatar/AvatarSubHeader";
 import { AvatarNameInput } from "../components/avatar/AvatarNameInput";
 import { AvatarImageList } from "../components/avatar/AvatarImageList";
+import { AvatarButton } from "../components/avatar/AvatarButton";
 
 const mainContentStyle = {
   display: "flex",
@@ -34,7 +35,9 @@ export const SignInPage = () => {
           <AvatarImageList />
         </AvatarSection>
       </MainContent>
-      <Footer />
+      <Footer>
+        <AvatarButton />
+      </Footer>
     </MainLayout>
   );
 };
