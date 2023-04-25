@@ -9,9 +9,10 @@ const images = [
 export const AvatarImageList = () => {
   return (
     <div>
-      {images.map((img) => {
+      {images.map((img, index) => {
         return (
           <img
+            key={index}
             src={`/images/${img.url}`}
             alt={img.altText}
             style={{ width: "50px", borderRadius: "50%", margin: "3px" }}
