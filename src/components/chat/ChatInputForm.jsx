@@ -1,4 +1,8 @@
+import { useRef } from "react";
+
 export const ChatInputForm = () => {
+  const inputRef = useRef();
+
   return (
     <div
       style={{
@@ -14,6 +18,7 @@ export const ChatInputForm = () => {
       <input
         type="text"
         style={{ flexGrow: 1, border: "none", outline: "none" }}
+        ref={inputRef}
       />
       <button
         style={{
@@ -26,6 +31,7 @@ export const ChatInputForm = () => {
           padding: "0px 10px",
           boxShadow: "1px 1px black",
         }}
+        onClick={() => console.log(inputRef.current.value)}
       >
         Send
       </button>
