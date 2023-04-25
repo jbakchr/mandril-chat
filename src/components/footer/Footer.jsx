@@ -7,7 +7,7 @@ export const Footer = ({ children }) => {
         bottom: 0,
         left: 0,
         right: 0,
-        height: "50px",
+        height: "55px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
