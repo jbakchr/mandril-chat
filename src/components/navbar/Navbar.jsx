@@ -1,3 +1,5 @@
+import { NavbarHeader } from "./NavbarHeader";
+
 const navbarStyle = {
   backgroundColor: "#0098c5",
   position: "fixed",
@@ -14,15 +16,7 @@ export const Navbar = () => {
   return (
     <div style={navbarStyle}>
       <p>logo</p>
-      <h1
-        style={{
-          fontFamily: "Lobster Two",
-          color: "white",
-          textShadow: "2px 2px black",
-        }}
-      >
-        Mandril Chatten
-      </h1>
+      <NavbarHeader />
       <p>user</p>
     </div>
   );
