@@ -5,6 +5,7 @@ import { AvatarHeader } from "../components/avatar/AvatarHeader";
 import { MainContent } from "../layout/MainContent";
 import { Divider } from "../components/avatar/Divider";
 import { AvatarImage } from "../components/avatar/AvatarImage";
+import { AvatarSection } from "../components/avatar/AvatarSection";
 
 const mainContentStyle = {
   display: "flex",
@@ -21,6 +22,7 @@ export const SignInPage = () => {
         <AvatarHeader />
         <Divider />
         <AvatarImage />
+        <AvatarSection />
       </MainContent>
       <Footer />
     </MainLayout>
