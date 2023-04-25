@@ -1,13 +1,13 @@
-import React from "react";
+import { MainLayout } from "../layout/MainLayout";
 import { Navbar } from "../components/navbar/Navbar";
 import { Footer } from "../components/footer/Footer";
 
 export const SignInPage = () => {
   return (
-    <div>
+    <MainLayout>
       <Navbar />
       <div style={{ flexGrow: 1 }}>Blah</div>
       <Footer />
-    </div>
+    </MainLayout>
   );
 };
