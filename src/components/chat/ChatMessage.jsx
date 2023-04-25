@@ -11,9 +11,19 @@ export const ChatMessage = ({ chat, user }) => {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: flexDirection }}>
-      <p>img here</p>
-      <p>Chat here</p>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: flexDirection,
+        alignItems: "center",
+      }}
+    >
+      <img
+        src={`/images/${chat.user.avatarImg.url}`}
+        alt={`/images/${chat.user.avatarImg.altText}`}
+        style={{ width: "25px", borderRadius: "50%", margin: "2px 4px" }}
+      />
+      <p style={{ fontSize: "13px" }}>{chat.msg}</p>
     </div>
   );
 };
