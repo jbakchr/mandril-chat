@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { collection, query, onSnapshot } from "firebase/firestore";
+import { collection, query, onSnapshot, orderBy } from "firebase/firestore";
 
 import { db } from "../../firebase/db";
 
@@ -7,7 +7,7 @@ export const ChatMessagesList = () => {
   const [chatMessages, setChatMessages] = useState([]);
 
   useEffect(() => {
-    const q = query(collection(db, "chatmessages"));
+    const q = query(collection(db, "chatmessages"), orderBy("createdAt"));
     const unsubscribe = onSnapshot(q, (querySnapshot) => {
       const messages = [];
 
