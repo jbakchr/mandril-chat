@@ -8,6 +8,7 @@ export const AvatarSubHeader = ({ headerText }) => {
           fontFamily: "Lobster Two",
           color: "gray",
           letterSpacing: "2px",
+          paddingBottom: "5px",
         }}
       >
         {headerText}
