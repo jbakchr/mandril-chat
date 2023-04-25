@@ -13,10 +13,14 @@ const imgStyle = {
   backgroundColor: "lightgray",
 };
 
-export const AvatarImage = ({ avatarImg }) => {
+export const AvatarImage = ({ avatarImg, user }) => {
   const renderImage = () => {
     if (avatarImg) {
       return <img src={`/images/${avatarImg.url}`} style={imgStyle} />;
+    }
+
+    if (user) {
+      return <img src={`/images/${user.avatarImg.url}`} style={imgStyle} />;
     }
 
     return <AvatarImagePlaceholder />;
