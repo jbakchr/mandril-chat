@@ -35,7 +35,7 @@ export const SignInPage = () => {
       <MainContent styles={mainContentStyle}>
         <AvatarHeader />
         <Divider />
-        <AvatarImage />
+        <AvatarImage avatarImg={avatarImg} />
         <AvatarSection>
           <AvatarSubHeader headerText="Step #1 : Indtast avatar navn" />
           <AvatarNameInput inputRef={inputRef} />
