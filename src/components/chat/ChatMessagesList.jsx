@@ -30,7 +30,9 @@ export const ChatMessagesList = () => {
 
   return (
     <ul>
-      <li>Numse</li>
+      {chatMessages.map((chat) => {
+        return <li key={chat.id}>{chat.msg}</li>;
+      })}
     </ul>
   );
 };
