@@ -1,12 +1,30 @@
 import { useRef, useEffect } from "react";
+import { collection, query, onSnapshot } from "firebase/firestore";
 
-import { saveChatMessage } from "../../firebase/db";
+import { db, saveChatMessage } from "../../firebase/db";
 
 export const ChatInputForm = ({ user }) => {
   const inputRef = useRef();
 
   useEffect(() => {
     inputRef.current.focus();
+
+    const q = query(collection(db, "chatmessages"));
+    const unsubscribe = onSnapshot(q, (querySnapshot) => {
+      const messages = [];
+      querySnapshot.forEach((doc) => {
+        messages.push({
+          ...doc.data(),
+          id: doc.id,
+        });
+      });
+
+      console.log("chat messages:", messages);
+    });
+
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   const submitChatMessage = () => {

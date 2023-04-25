@@ -2,7 +2,7 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 import { firebaseApp } from "./firebaseApp";
 
-const db = getFirestore(firebaseApp);
+export const db = getFirestore(firebaseApp);
 
 export const saveChatMessage = async (msg, user) => {
   await addDoc(collection(db, "chatmessages"), {
