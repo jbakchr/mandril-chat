@@ -8,6 +8,9 @@ export const Footer = ({ children }) => {
         left: 0,
         right: 0,
         height: "50px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
       }}
     >
       {children}
