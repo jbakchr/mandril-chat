@@ -1,4 +1,5 @@
 import { NavbarHeader } from "./NavbarHeader";
+import { NavbarLogo } from "./NavbarLogo";
 
 const navbarStyle = {
   backgroundColor: "#0098c5",
@@ -15,9 +16,9 @@ const navbarStyle = {
 export const Navbar = () => {
   return (
     <div style={navbarStyle}>
-      <p>logo</p>
+      <NavbarLogo hidden />
       <NavbarHeader />
-      <p>user</p>
+      <NavbarLogo />
     </div>
   );
 };
